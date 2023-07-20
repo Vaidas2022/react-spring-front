@@ -39,6 +39,7 @@ function ClientEdit(props){
     }
 
     function handleChange(event) {
+        console.log("Handle change is working");
         const target = event.target;
         const value = target.value;
         const name = target.name;
