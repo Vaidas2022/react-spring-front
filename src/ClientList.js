@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, ButtonGroup, Container, Table } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import AppNavbar from './AppNavbar';
 
 
 function ClientList() {
@@ -41,7 +42,7 @@ function ClientList() {
                     <td>{client.email}</td>
                     <td>
                         <ButtonGroup>
-                            <Button size="sm" color="primary" to={"/clients/" + client.id}>Edit</Button>
+                            <Button size="sm" color="primary" tag={Link} to={"/clients/" + client.id}>Edit</Button>
                             <Button size="sm" color="danger" onClick={() => remove(client.id)}>Delete</Button>
                         </ButtonGroup>
                     </td>
@@ -50,6 +51,7 @@ function ClientList() {
 
   return (
     <div className="ClientList">
+        <AppNavbar/>
         <Container fluid>
             <h2>Clients</h2>
             <Table className="mt-4 text-dark">
