@@ -37,7 +37,9 @@ function ClientList() {
   }, []);
 
   const clientList = clients.map(client => {
-        return <tr key={client.id}>
+        return(
+        <>        
+        <tr key={client.id}>
                     <td style={{whiteSpace: 'nowrap'}}>{client.name}</td>
                     <td>{client.email}</td>
                     <td>
@@ -47,13 +49,19 @@ function ClientList() {
                         </ButtonGroup>
                     </td>
                 </tr>
-    });
+        </>
+        )});
 
   return (
     <div className="ClientList">
         <AppNavbar/>
+        <div className="float-right">
+                    <Button color="success" tag={Link} to="/clients/new">Add Client</Button>
+            </div>
         <Container fluid>
+
             <h2>Clients</h2>
+
             <Table className="mt-4 text-dark">
                             <thead>
                             <tr>

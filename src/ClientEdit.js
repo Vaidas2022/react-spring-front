@@ -39,12 +39,11 @@ function ClientEdit(props){
     }
 
     function handleChange(event) {
-        console.log("Handle change is working");
-        const target = event.target;
-        const value = target.value;
-        const name = target.name;
-        item[name] = value;
-        setItem(item);
+        const { name, value } = event.target;
+            setItem((prevItem) => ({
+                ...prevItem,
+                [name]: value,
+            }));
     }
 
     
