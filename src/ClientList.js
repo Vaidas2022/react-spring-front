@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button, ButtonGroup, Container, Table } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 
 function ClientList() {
@@ -40,6 +41,7 @@ function ClientList() {
                     <td>{client.email}</td>
                     <td>
                         <ButtonGroup>
+                            <Button size="sm" color="primary" to={"/clients/" + client.id}>Edit</Button>
                             <Button size="sm" color="danger" onClick={() => remove(client.id)}>Delete</Button>
                         </ButtonGroup>
                     </td>
