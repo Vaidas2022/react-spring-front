@@ -52,7 +52,7 @@ function ClientList() {
     <div className="ClientList">
         <Container fluid>
             <h2>Clients</h2>
-            <Table className="mt-4 text-light">
+            <Table className="mt-4 text-dark">
                             <thead>
                             <tr>
                                 <th width="30%">Name</th>
