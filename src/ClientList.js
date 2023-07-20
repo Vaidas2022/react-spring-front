@@ -55,11 +55,11 @@ function ClientList() {
   return (
     <div className="ClientList">
         <AppNavbar/>
-        <div className="float-right">
+            
+        <Container fluid>
+            <div className="float-end mt-2">
                     <Button color="success" tag={Link} to="/clients/new">Add Client</Button>
             </div>
-        <Container fluid>
-
             <h2>Clients</h2>
 
             <Table className="mt-4 text-dark">
